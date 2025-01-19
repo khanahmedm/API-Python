@@ -1,7 +1,8 @@
 import requests
+from api_key import get_api_key 
 
 # API Details
-api_key = "3bd34ea9de9400e2026b670b278d7e58"
+api_key = get_api_key()
 base_url = "https://api.openweathermap.org/data/2.5/weather"
 
 # Parameters
