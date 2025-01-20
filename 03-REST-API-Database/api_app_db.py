@@ -29,10 +29,6 @@ Migrate(app,db)
 jwt = JWTManager(app)
 
 api = Api(app)
-# Setup the Flask-JWT-Extended extension
-#app.config["JWT_SECRET_KEY"] = "secretness"  # Change this!
-#jwt = JWTManager(app)
-
 
 # Create a route to authenticate your users and return JWTs. The
 # create_access_token() function is used to actually generate the JWT.
@@ -55,8 +51,6 @@ def protected():
     # Access the identity of the current user with get_jwt_identity
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user), 200
-
-#puppies = []
 
 ###################################################
 ################ MODELS ###########################
